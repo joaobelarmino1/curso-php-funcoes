@@ -1,4 +1,5 @@
 <?php
+require_once 'funcoes.php';
 
 $contas = [
   38298843894 => [
@@ -20,6 +21,8 @@ $contas[38114556879] = [ // Sempre que for uma chave com significado, como um cp
   'titular' => 'Monique',
   'saldo' => 1420
 ];
+
+$contas[38298843894] = sacar(1.50, $contas[38298843894]);
 
 foreach($contas as $cpf => $conta){
   echo "CPF: ". $cpf ."\nDono da conta: " . $conta['titular'] ." \nSalário: ". $conta['saldo'] . "\n\n";
