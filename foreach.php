@@ -25,5 +25,6 @@ $contas[38114556879] = [ // Sempre que for uma chave com significado, como um cp
 $contas[38298843894] = sacar(1.50, $contas[38298843894]);
 
 foreach($contas as $cpf => $conta){
-  echo "CPF: ". $cpf ."\nDono da conta: " . $conta['titular'] ." \nSalário: ". $conta['saldo'] . "\n\n";
+  ['titular' => $titular, 'saldo' => $saldo] = $conta;
+  echo "CPF: ". $cpf ."\nDono da conta: $titular \nSalário: $saldo\n\n";
 }
